@@ -1,6 +1,6 @@
 #define GLEW_STATIC
-#include "Shader.h"
-#include "Display.h"
+#include "header_files\Shader.h"
+#include "header_files\Display.h"
 #include <SOIL\SOIL.h>
 #include <GLM/glm.hpp>
 #include <GLM/gtc/matrix_transform.hpp>
@@ -53,7 +53,7 @@ int main()
 	glfwSetKeyCallback(window, key_callback);
 	glfwSetCursorPosCallback(window, mouse_callback);
 
-	Shader shader("./shader.vert", "./shader.frag");
+	Shader shader("./shader_files/shader.vert", "./shader_files/shader.frag");
 
 	// Vertices for rendering
 	GLfloat vertices[] = {
@@ -137,7 +137,7 @@ int main()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	// Load image, create texture and generate mipmaps
 	int width, height;
-	unsigned char* image = SOIL_load_image("black.png", &width, &height, 0, SOIL_LOAD_RGB);
+	unsigned char* image = SOIL_load_image("images/black.png", &width, &height, 0, SOIL_LOAD_RGB);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glGenerateMipmap(GL_TEXTURE_2D);
 	SOIL_free_image_data(image);
@@ -153,7 +153,7 @@ int main()
 	// Set texture filtering parameters
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	image = SOIL_load_image("TrollgenStudiosLogoOLD.png", &width, &height, 0, SOIL_LOAD_RGB);
+	image = SOIL_load_image("images/TrollgenStudiosLogoOLD.png", &width, &height, 0, SOIL_LOAD_RGB);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	glGenerateMipmap(GL_TEXTURE_2D);
 	SOIL_free_image_data(image);
@@ -187,7 +187,7 @@ int main()
 		movement();
 
 		// Set the background color and clear the color and depth buffers of the screen
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClearColor(0.3f, 0.1f, 0.5f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// Use the shaders and textures created

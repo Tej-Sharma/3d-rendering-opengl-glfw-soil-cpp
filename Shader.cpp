@@ -1,4 +1,4 @@
-#include "Shader.h"
+#include "header_files\Shader.h"
 using namespace std;
 
 // Code adapted from 'free Open GL tutorial's shader codebase'
@@ -75,9 +75,6 @@ Shader::Shader(const GLchar* vertexPath, const GLchar* fragmentPath)
 	// Delete the shaders as they're linked into our program now and no longer necessery
 	glDeleteShader(vertex);
 	glDeleteShader(fragment);
-
-
-
 }
 
 void Shader::Use()
