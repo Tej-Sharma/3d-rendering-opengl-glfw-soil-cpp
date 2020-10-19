@@ -12,6 +12,10 @@ For image loading, the great and simple SOIL library is used to extract ".png" f
 
 Uses a few basic shaders written in the OpenGL shading language, GLSL.
 
+## Code
+
+Display, Shader, and main.cpp is where the bulk of the content is at.
+
 ## Usage
 
 Feel free to incorporate the code and shader files in your own code examples.
