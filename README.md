@@ -11,10 +11,11 @@ Written in C++ to harness the best optimizations of the library in the future.
 For image loading, the great and simple SOIL library is used to extract ".png" files from the directory.
 
 Uses a few basic shaders written in the OpenGL shading language, GLSL.
+These shaders can be found in "shader_files".
 
 ## Code
 
-Display, Shader, and main.cpp is where the bulk of the content is at.
+Display.cpp, Shader.cpp, and main.cpp are the main code files where the bulk of the content is at.
 
 ## Usage
 
